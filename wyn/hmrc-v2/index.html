@@ -41,10 +41,10 @@
    min-height:100vh;align-content:center;padding:clamp(40px,6vh,90px) 0}
  /* the ledger band: the moving column and the fixed column, ruled top and bottom, filling the
     width so the film is a plate on a line rather than a video floating in white */
- .band{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(18px,2.4vw,40px);
+ .band{display:grid;grid-template-columns:1.45fr .8fr;gap:clamp(18px,2.4vw,40px);
    border-top:2px solid var(--sc-ink);border-bottom:1px solid var(--rule);
    padding:clamp(12px,1.6vw,22px) 0;align-items:center}
- .band video{width:100%;display:block;max-height:min(38vh,380px);object-fit:contain}
+ .band video{width:100%;display:block;max-height:min(46vh,470px);object-fit:contain}
  .band svg{width:100%;height:auto;display:block}
  .bandlab{font-size:.64rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
    color:var(--sc-ink-soft);margin-bottom:8px}
@@ -77,6 +77,18 @@
  details[open] summary::before{content:"\2212"}
  details p{color:var(--sc-ink-soft);margin-top:9px}
 
+ /* proof: named institutions, WYN's own published accounts, each carrying its attribution.
+    A rule between them rather than a card around each, because a card wall reads as a logo wall. */
+ .proof{display:grid;gap:0;margin-top:28px;border-top:2px solid var(--sc-ink)}
+ .pf{display:grid;grid-template-columns:minmax(180px,1fr) 2.2fr;gap:clamp(16px,2.4vw,40px);
+   padding:26px 0;border-bottom:1px solid var(--rule);align-items:start}
+ .pf__who{font-weight:800;font-size:1.02rem;line-height:1.3}
+ .pf__role{font-size:.85rem;color:var(--sc-ink-soft);margin-top:5px;font-weight:600}
+ .pf__fig{font-size:clamp(1.4rem,2.4vw,2rem);font-weight:900;letter-spacing:-.03em;
+   color:var(--sc-accent);margin-top:10px;line-height:1}
+ .pf__what{font-size:1rem;line-height:1.6}
+ .pf__src{font-size:.8rem;color:var(--sc-ink-soft);margin-top:9px}
+ @media (max-width:700px){ .pf{grid-template-columns:1fr;gap:8px} }
  .fwd{background:var(--sc-surface);border-left:3px solid var(--sc-accent);padding:24px 28px;
    margin-top:26px;max-width:70ch;border-radius:0 8px 8px 0}
  .form{display:grid;gap:13px;margin-top:24px;max-width:500px}
@@ -278,6 +290,63 @@ will know who sent it. If it is not, that is the end and it cost you an email ad
  management&rdquo; and their landing page says &ldquo;$1B+ software contract volume
  negotiated&rdquo;. Neither is quoted here as fact, and anyone taking this further should ask which
  is current.</p>
+</div></section>
+
+<section class="sc-section" data-proof><div class="col">
+ <h2>Four of these are UK public bodies</h2>
+ <p>Every line below is WYN&rsquo;s own published account of its own work, taken from their site
+ and their blog on 8 September 2026. <b>None of it is a quotation from the person
+ named</b>, because WYN do not publish one. They are WYN describing what happened, and they are
+ presented here on exactly those terms.</p>
+ <div class="proof">
+  <div class="pf">
+   <div><div class="pf__who">University of Brighton</div>
+     <div class="pf__role">Julian Wood, Director of Procurement</div>
+     <div class="pf__fig">&pound;1.5m</div></div>
+   <div><p class="pf__what" style="margin-top:0">Gross savings across five months. WYN&rsquo;s
+     account is that he walked into the process sceptical, and that they helped decode the sales
+     tactics that sit inside a renewal call.</p>
+     <p class="pf__src cite">WYN, <em>How UK Universities Are Cutting Software Costs</em>,
+     21 August 2026. Their figure, not an audited one.</p></div>
+  </div>
+  <div class="pf">
+   <div><div class="pf__who">Bath Spa University</div>
+     <div class="pf__role">Two renewal cycles</div>
+     <div class="pf__fig">Compliant</div></div>
+   <div><p class="pf__what" style="margin-top:0"><b>This is the line that matters most on this
+     page.</b> WYN state the work came away fully compliant with governance and procurement rules
+     while still driving savings. A department cannot use a supplier that makes its procurement
+     harder to defend, and this is the only published evidence on the question.</p>
+     <p class="pf__src cite">WYN, same post, 21 August 2026. Compliance stated by WYN, not
+     evidenced by a published audit.</p></div>
+  </div>
+  <div class="pf">
+   <div><div class="pf__who">Canterbury Christ Church University</div>
+     <div class="pf__role">First project</div>
+     <div class="pf__fig">48%</div></div>
+   <div><p class="pf__what" style="margin-top:0">A six figure saving on the first project alone,
+     which WYN describe as what built trust in the model.</p>
+     <p class="pf__src cite">WYN, same post. The contract is not named, so the base the 48% is
+     measured from cannot be checked.</p></div>
+  </div>
+  <div class="pf">
+   <div><div class="pf__who">Nordic FMCG group</div>
+     <div class="pf__role">7,000+ employees, Microsoft true-up</div>
+     <div class="pf__fig">$1.1m</div></div>
+   <div><p class="pf__what" style="margin-top:0">A year, being 15% off, from optimising the
+     licensing structure, the Azure migration route and the route to procurement. The company is
+     not named.</p>
+     <p class="pf__src cite">WYN case study, wynpro.io, read 8 September 2026.</p></div>
+  </div>
+ </div>
+ <h3>What is not here, and why that is worth saying</h3>
+ <p>WYN&rsquo;s own homepage carries a heading, <em>What Our Clients Say</em>, with nothing under
+ it. They have the proof and they do not show it. That is their choice and not a mark against the
+ work, but a page that quoted a testimonial WYN have not published would be inventing one, and
+ this page does not do that.</p>
+ <p>BIMM University&rsquo;s Chief Financial Officer, Gavin Black, is named by WYN as having gone
+ from sceptic to believer. There is no figure attached to that one, so it sits here as a name and
+ nothing more.</p>
 </div></section>
 
 <!-- ACT 6 · THE SEATS · flow -->
