@@ -1,174 +1,291 @@
 <!doctype html><html lang="en-GB"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HM Revenue &amp; Customs &middot; sixteen contracts, and the one that renews first</title>
+<title>HM Revenue &amp; Customs &middot; a framework caps, a call-off pays</title>
+<meta name="description" content="Sixteen software contracts, £194,303,302 a year, and the largest renews first. One document showing where each call-off sits, built from what you already publish.">
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
  :root{--ink:#16163F;--acc:#9E3FFD;--mut:#5B5B78;--rule:#E6E2F2;--wash:#F6F1FE}
  *{margin:0;padding:0;box-sizing:border-box}
- body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;
-      -webkit-font-smoothing:antialiased}
- .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
- .narrow{max-width:66ch}
- header{padding:clamp(48px,7vw,96px) 0 clamp(32px,4vw,56px)}
- .eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
- h1{font-size:clamp(2.1rem,5vw,3.9rem);line-height:1.05;letter-spacing:-.03em;font-weight:900;margin-top:16px}
- h1 em{font-style:normal;color:var(--acc)}
- .lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--mut);margin-top:22px;max-width:60ch}
- section{padding:clamp(40px,6vw,84px) 0;border-top:1px solid var(--rule)}
- h2{font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.12;letter-spacing:-.025em;font-weight:800}
- h3{font-size:1.12rem;font-weight:800;margin-top:30px}
- p{margin-top:16px;max-width:66ch} p.tight{margin-top:10px}
- .fig{margin:30px 0 10px;overflow-x:auto} .fig svg{width:100%;min-width:640px;height:auto;display:block}
- .cap{font-size:.86rem;color:var(--mut);margin-top:10px}
- .tbl{width:100%;border-collapse:collapse;margin-top:24px;font-size:.95rem;min-width:520px}
+ body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.62;
+   -webkit-font-smoothing:antialiased}
+ /* RULED LEDGER: the chrome is a running hairline down the left margin, no nav bar anywhere. */
+ .margin{position:fixed;left:max(12px,2.2vw);top:0;bottom:0;width:1px;background:var(--rule);z-index:5}
+ .margin i{position:absolute;left:-1px;width:3px;background:var(--acc);top:0;height:var(--read,0%);
+   transition:height .12s linear}
+ .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(30px,5vw,56px)}
+ header{padding:clamp(40px,6vw,84px) 0 clamp(28px,4vw,48px)}
+ .eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+ h1{font-size:clamp(2.2rem,5.4vw,4.2rem);line-height:1.04;letter-spacing:-.035em;font-weight:900;margin-top:16px}
+ .lede{font-size:clamp(1.04rem,1.5vw,1.24rem);color:var(--mut);margin-top:22px;max-width:58ch}
+ .film{margin-top:34px;border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:#fff}
+ .film video{width:100%;display:block}
+ .promise{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:26px}
+ .btn{display:inline-block;padding:14px 24px;border:0;border-radius:9px;background:var(--acc);color:#fff;
+   font:inherit;font-weight:800;font-size:1rem;cursor:pointer;text-decoration:none}
+ .pnote{color:var(--mut);font-size:.95rem;max-width:34ch}
+ section{padding:clamp(38px,5.5vw,80px) 0;border-top:1px solid var(--rule)}
+ h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.12;letter-spacing:-.028em;font-weight:800}
+ h3{font-size:1.1rem;font-weight:800;margin-top:32px}
+ p{margin-top:16px;max-width:66ch}
+ .silence{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;line-height:1.32;letter-spacing:-.02em;
+   max-width:24ch;margin-top:8px}
+ .fig{margin:30px 0 8px;overflow-x:auto} .fig svg{width:100%;min-width:620px;height:auto;display:block}
+ .cap{font-size:.85rem;color:var(--mut);margin-top:10px;max-width:70ch}
  .tblwrap{overflow-x:auto}
- .tbl th{text-align:left;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
+ .tbl{width:100%;border-collapse:collapse;margin-top:24px;font-size:.94rem;min-width:540px}
+ .tbl th{text-align:left;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
    padding:0 12px 10px 0;border-bottom:1px solid var(--rule)}
- .tbl td{padding:13px 12px 13px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+ .tbl td{padding:13px 12px;border-bottom:1px solid var(--rule);vertical-align:top;padding-left:0}
  .tbl .r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
  .tbl tr.me td{background:var(--wash);font-weight:700}
- .you{background:var(--acc);color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.1em;
-   text-transform:uppercase;padding:2px 7px;border-radius:99px;vertical-align:middle}
- .routes{display:grid;grid-template-columns:1fr 1fr;margin-top:32px;border-top:1px solid var(--rule)}
+ .you{background:var(--acc);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.1em;
+   text-transform:uppercase;padding:2px 7px;border-radius:99px}
+ .routes{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:1px solid var(--rule)}
  .rt{padding:26px 0} .rt--b{padding-left:34px;border-left:1px solid var(--rule)}
- .rt h3{margin-top:0;font-size:1.16rem} .rt p{font-size:.97rem}
- .rt .tag{font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
- dl.obj{margin-top:26px} dl.obj dt{font-weight:800;margin-top:24px}
- dl.obj dd{color:var(--mut);margin-top:8px;max-width:66ch}
- .fwd{background:var(--wash);border-left:3px solid var(--acc);padding:26px 30px;margin-top:30px;
+ .rt h3{margin-top:0;font-size:1.14rem} .rt p{font-size:.96rem}
+ .rt .tag{font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+ details{border-bottom:1px solid var(--rule);padding:16px 0}
+ summary{font-weight:700;cursor:pointer;list-style:none}
+ summary::-webkit-details-marker{display:none}
+ summary::before{content:"+";color:var(--acc);font-weight:900;margin-right:10px}
+ details[open] summary::before{content:"\2212"}
+ details p{color:var(--mut);margin-top:10px}
+ .fwd{background:var(--wash);border-left:3px solid var(--acc);padding:24px 28px;margin-top:28px;
    max-width:70ch;border-radius:0 8px 8px 0}
- .form{display:grid;gap:14px;margin-top:28px;max-width:520px}
- label{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
- input{width:100%;padding:14px 15px;border:1px solid var(--rule);border-radius:9px;font:inherit;
-   font-size:1rem;color:var(--ink)}
+ .form{display:grid;gap:14px;margin-top:26px;max-width:500px}
+ label{font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+ input{width:100%;padding:14px 15px;border:1px solid var(--rule);border-radius:9px;font:inherit;font-size:1rem}
  input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
- .btn{margin-top:6px;padding:15px 22px;border:0;border-radius:9px;background:var(--acc);color:#fff;
-   font:inherit;font-weight:800;font-size:1rem;cursor:pointer}
  .terms{font-size:.86rem;color:var(--mut);margin-top:14px;max-width:56ch}
- footer{padding:60px 0 80px;border-top:1px solid var(--rule);font-size:.78rem;color:#7B7B92;
-   line-height:1.65;max-width:80ch}
- @media (max-width:760px){ .routes{grid-template-columns:1fr}
-   .rt--b{padding-left:0;border-left:0;border-top:1px solid var(--rule)} }
+ footer{padding:70px 0 90px;border-top:1px solid var(--rule);font-size:.77rem;color:#7B7B92;
+   line-height:1.7;max-width:82ch}
+ #vgrip{cursor:ew-resize}
+ @media (max-width:760px){
+  .routes{grid-template-columns:1fr}
+  .rt--b{padding-left:0;border-left:0;border-top:1px solid var(--rule)}
+  .margin{display:none} }
 </style></head><body>
-
+<div class="margin"><i></i></div>
 <div class="wrap">
+
 <header>
   <div class="eyebrow">For finance and commercial at HM Revenue &amp; Customs</div>
-  <h1>Sixteen contracts.<br>The largest one renews <em>first</em>.</h1>
-  <p class="lede">Your Amazon Web Services call-off is £350,000,000 and ends on
-  <b>30 November 2026</b>, <b id="dleft">shortly</b>. Before it renews, we will send you
-  one document showing where that call-off sits against what the same supplier charges other
-  departments. Everything in it is already published by you. Nothing leaves your building and
-  there is nothing to procure.</p>
+  <h1>A framework caps.<br>A call-off pays.</h1>
+  <p class="lede">Your Amazon Web Services call-off is £350,000,000 and ends
+  <b>30 November 2026</b>, <b id="dleft">shortly</b>. Before it renews we will send you
+  one document showing where it sits against what the same supplier charges other departments.
+  Everything in it is already published by you.</p>
+  <div class="film"><video src="hero.mp4" muted playsinline loop autoplay preload="metadata"
+    aria-label="A silent film of HMRC's contract register"></video></div>
+  <div class="promise">
+    <a class="btn" href="#ask">Send me the published read</a>
+    <p class="pnote">You send nothing. No data, no engagement, nothing to procure.</p>
+  </div>
 </header>
 
 <section>
   <h2>Your own register, as you published it</h2>
-  <p>Sixteen software contracts still running, worth <b>£194,303,302 a year</b> between them. Each
-  mark is one contract, placed at the date it ends and sized by what it costs a year. Read on
-  8 September 2026 from Contracts Finder.</p>
-  <div class="fig"><svg viewBox="0 0 1000 300" role="img" aria-label="HMRC software contracts by expiry date"><line x1="336.3" y1="6" x2="336.3" y2="274" stroke="#9E3FFD" stroke-width="1.5" stroke-dasharray="5 5"/><rect x="26.0" y="252.7" width="8" height="21.3" rx="5" fill="#D9D6E6"><title>XMA Ltd, £46,877 a year, ends 18 September 2026</title></rect><rect x="328.3" y="12.0" width="16" height="262.0" rx="5" fill="#9E3FFD"><title>Amazon Web Services EMEA SARL, UK Branch, £116,746,575 a year, ends 30 November 2026</title></rect><rect x="428.9" y="242.2" width="8" height="31.8" rx="5" fill="#D9D6E6"><title>SoftwareOne UK Ltd, £629,200 a year, ends 23 December 2026</title></rect><rect x="454.0" y="232.9" width="8" height="41.1" rx="5" fill="#D9D6E6"><title>COMPUTACENTER (UK) LIMITED, £1,607,313 a year, ends 29 December 2026</title></rect><rect x="558.9" y="231.8" width="8" height="42.2" rx="5" fill="#D9D6E6"><title>Softcat PLC, £1,753,601 a year, ends 23 January 2027</title></rect><rect x="689.0" y="251.4" width="8" height="22.6" rx="5" fill="#D9D6E6"><title>Orgvue Limited, £84,058 a year, ends 23 February 2027</title></rect><rect x="714.2" y="246.9" width="8" height="27.1" rx="5" fill="#D9D6E6"><title>Think Associates Limited, £295,037 a year, ends 1 March 2027</title></rect><rect x="731.0" y="248.6" width="8" height="25.4" rx="5" fill="#D9D6E6"><title>CDW Limited, £201,182 a year, ends 5 March 2027</title></rect><rect x="831.7" y="249.8" width="8" height="24.2" rx="5" fill="#D9D6E6"><title>Synthesia Limited, £146,160 a year, ends 29 March 2027</title></rect><rect x="835.9" y="143.2" width="8" height="130.8" rx="5" fill="#D9D6E6"><title>Arvato Limited, £28,712,523 a year, ends 30 March 2027</title></rect><rect x="840.1" y="246.1" width="8" height="27.9" rx="5" fill="#D9D6E6"><title>COMPUTACENTER (U K) LTD, £342,034 a year, ends 31 March 2027</title></rect><rect x="840.1" y="116.0" width="8" height="158.0" rx="5" fill="#D9D6E6"><title>Pegasystems Limited, £42,516,235 a year, ends 31 March 2027</title></rect><rect x="840.1" y="245.2" width="8" height="28.8" rx="5" fill="#D9D6E6"><title>Bytes Software Services Limited, £404,388 a year, ends 31 March 2027</title></rect><rect x="890.5" y="250.1" width="8" height="23.9" rx="5" fill="#D9D6E6"><title>Insight Direct (UK) Ltd, £135,553 a year, ends 12 April 2027</title></rect><rect x="961.8" y="242.5" width="8" height="31.5" rx="5" fill="#D9D6E6"><title>Skillsoft UK Limited, £607,047 a year, ends 29 April 2027</title></rect><rect x="966.0" y="251.7" width="8" height="22.3" rx="5" fill="#D9D6E6"><title>SPECIALIST COMPUTER CENTRES PLC, £75,519 a year, ends 30 April 2027</title></rect><line x1="30" y1="274" x2="970" y2="274" stroke="#E6E2F2" stroke-width="1.5"/><text x="30" y="294" font-size="13" font-weight="700" fill="#5B5B78">Sep 2026</text><text x="336.3" y="294" font-size="13" font-weight="800" fill="#9E3FFD" text-anchor="middle">30 Nov 2026</text><text x="970" y="294" font-size="13" font-weight="700" fill="#5B5B78" text-anchor="end">Apr 2027</text></svg></div>
-  <p class="cap">Source: award notices published by HM Revenue &amp; Customs on Contracts Finder.
-  Hover a mark for the supplier, the annual value and the end date.</p>
-  <p>The one in purple is Amazon Web Services EMEA SARL, UK Branch, £350,000,000 over the term,
-  £116,746,575 a year, ending 30 November 2026. It is the largest and it is
-  the first to come up.</p>
+  <p>16 software contracts still running, worth <b>£194,303,302 a year</b> between them. Each mark
+  is one contract, placed at the date it ends and sized by what it costs a year. Read on
+  8 September 2026.</p>
+  <div class="fig"><svg viewBox="0 0 1000 300" role="img" aria-label="HMRC software contracts placed by expiry date"><line x1="336.3" y1="6" x2="336.3" y2="272" stroke="#9E3FFD" stroke-width="1.5" stroke-dasharray="5 5"/><rect x="26.0" y="252.7" width="8" height="19.3" rx="4" fill="#D9D6E6"><title>XMA Ltd · £46,877 a year · ends 18 September 2026</title></rect><rect x="328.3" y="14.0" width="16" height="258.0" rx="4" fill="#9E3FFD"><title>Amazon Web Services EMEA SARL, UK Branch · £116,746,575 a year · ends 30 November 2026</title></rect><rect x="428.9" y="242.3" width="8" height="29.7" rx="4" fill="#D9D6E6"><title>SoftwareOne UK Ltd · £629,200 a year · ends 23 December 2026</title></rect><rect x="454.0" y="233.1" width="8" height="38.9" rx="4" fill="#D9D6E6"><title>COMPUTACENTER (UK) LIMITED · £1,607,313 a year · ends 29 December 2026</title></rect><rect x="558.9" y="232.0" width="8" height="40.0" rx="4" fill="#D9D6E6"><title>Softcat PLC · £1,753,601 a year · ends 23 January 2027</title></rect><rect x="689.0" y="251.5" width="8" height="20.5" rx="4" fill="#D9D6E6"><title>Orgvue Limited · £84,058 a year · ends 23 February 2027</title></rect><rect x="714.2" y="247.0" width="8" height="25.0" rx="4" fill="#D9D6E6"><title>Think Associates Limited · £295,037 a year · ends 1 March 2027</title></rect><rect x="731.0" y="248.7" width="8" height="23.3" rx="4" fill="#D9D6E6"><title>CDW Limited · £201,182 a year · ends 5 March 2027</title></rect><rect x="831.7" y="249.9" width="8" height="22.1" rx="4" fill="#D9D6E6"><title>Synthesia Limited · £146,160 a year · ends 29 March 2027</title></rect><rect x="835.9" y="144.1" width="8" height="127.9" rx="4" fill="#D9D6E6"><title>Arvato Limited · £28,712,523 a year · ends 30 March 2027</title></rect><rect x="840.1" y="246.2" width="8" height="25.8" rx="4" fill="#D9D6E6"><title>COMPUTACENTER (U K) LTD · £342,034 a year · ends 31 March 2027</title></rect><rect x="840.1" y="117.2" width="8" height="154.8" rx="4" fill="#D9D6E6"><title>Pegasystems Limited · £42,516,235 a year · ends 31 March 2027</title></rect><rect x="840.1" y="245.3" width="8" height="26.7" rx="4" fill="#D9D6E6"><title>Bytes Software Services Limited · £404,388 a year · ends 31 March 2027</title></rect><rect x="890.5" y="250.1" width="8" height="21.9" rx="4" fill="#D9D6E6"><title>Insight Direct (UK) Ltd · £135,553 a year · ends 12 April 2027</title></rect><rect x="961.8" y="242.6" width="8" height="29.4" rx="4" fill="#D9D6E6"><title>Skillsoft UK Limited · £607,047 a year · ends 29 April 2027</title></rect><rect x="966.0" y="251.7" width="8" height="20.3" rx="4" fill="#D9D6E6"><title>SPECIALIST COMPUTER CENTRES PLC · £75,519 a year · ends 30 April 2027</title></rect><line x1="30" y1="272" x2="970" y2="272" stroke="#E6E2F2" stroke-width="1.5"/><text x="30" y="292" font-size="13" font-weight="700" fill="#5B5B78">Sep 2026</text><text x="336.3" y="292" font-size="13" font-weight="800" fill="#9E3FFD" text-anchor="middle">30 Nov 2026</text><text x="970" y="292" font-size="13" font-weight="700" fill="#5B5B78" text-anchor="end">Apr 2027</text></svg></div>
+  <p class="cap">Award notices published by HM Revenue &amp; Customs on Contracts Finder. Hover a mark
+  for the supplier, the annual value and the end date.</p>
+  <p>The one in purple is Amazon Web Services EMEA SARL, UK Branch. £350,000,000 over the term, £116,746,575 a year,
+  ending 30 November 2026. It is both the largest and the first to come up, and
+  those two facts together are the only reason this page exists.</p>
+  <p>The shape of the chart is the argument. Contracts do not come up evenly: they cluster, and the
+  cluster is set years earlier by whoever signed them. 15 of your 16 live contracts are
+  call-offs from a framework agreement, which means the route was decided once and the price is
+  decided again at every renewal. The renewals are the only dates on this chart that anybody can
+  still do anything about.</p>
+  <p>Nothing on this chart was obtained by request or by inference. Contracts Finder is a publication
+  duty, the notices were filed by HMRC, and the only work done here was reading them and putting
+  them in date order. That is worth saying plainly, because the first reaction to a page like this
+  is usually to wonder where the information came from.</p>
 </section>
 
 <section>
-  <h2>A renewal is the only moment the price moves</h2>
-  <p>A framework sets what a supplier may charge at most. The call-off sets what you actually pay,
-  and the call-off is the thing being renewed. For the term after that, the number is settled and
-  no amount of good management moves it.</p>
-  <p>That is the whole reason this page has a date on it rather than a season.</p>
+  <h2>The hinge</h2>
+  <p class="silence">A framework sets what a supplier may charge at most. A call-off sets what you
+  actually pay. A renewal is the only moment that number moves.</p>
+  <p>After it renews it is settled for the whole of the next term, and no amount of good management
+  moves it. That is why this page carries a date rather than a season.</p>
 </section>
 
 <section>
-  <h2>What the register already lets anyone see</h2>
+  <h2>The same supplier, elsewhere on the same register</h2>
   <p>There are <b>9 Amazon Web Services contracts</b> on the public register across
-  <b>8 buyers</b>. They are not identical: scope, consumption and term all differ. But they
-  are the same supplier, published by the same rules, and they can be set beside each other.</p>
-  <div class="tblwrap"><table class="tbl"><thead><tr><th>Department</th><th class="r">A year</th><th class="r">Contract</th><th class="r">Ends</th></tr></thead><tbody><tr><td>Home Office</td><td class="r">£150,196,594</td><td class="r">£450,281,369</td><td class="r">30 Nov 2026</td></tr><tr class="me"><td>HM Revenue &amp; Customs <span class="you">you</span></td><td class="r">£116,746,575</td><td class="r">£350,000,000</td><td class="r">30 Nov 2026</td></tr><tr><td>Department for International Trade</td><td class="r">£4,436,370</td><td class="r">£13,300,000</td><td class="r">31 Dec 2026</td></tr><tr><td>HM Land Registry</td><td class="r">£1,906,108</td><td class="r">£5,709,190</td><td class="r">28 Feb 2027</td></tr><tr><td>CPS</td><td class="r">£657,717</td><td class="r">£1,970,000</td><td class="r">31 Mar 2027</td></tr><tr><td>Home Office</td><td class="r">£644,077</td><td class="r">£1,930,908</td><td class="r">30 Nov 2026</td></tr></tbody></table></div>
-  <p class="cap">Contracts Finder, read 8 September 2026. Annual value is the contract
-  value divided by its term.</p>
-  <p><b>This page does not tell you which way your number falls.</b> Two departments on this list
-  end on the same day at very different annual values, and the difference could be scope or it
-  could be price. Separating those two is the work, and it is the only thing worth paying for.</p>
+  <b>8 buyers</b>. They are not identical: scope, consumption and term all differ. But they are the
+  same supplier, published under the same duty, and they can be set beside each other.</p>
+  <div class="tblwrap"><table class="tbl"><thead><tr><th>Department</th><th class="r">A year</th><th class="r">Published value</th><th class="r">Ends</th></tr></thead><tbody><tr><td>Home Office</td><td class="r">£150,196,594</td><td class="r">£450,281,369</td><td class="r">30 Nov 2026</td></tr><tr class="me"><td>HM Revenue &amp; Customs <span class="you">you</span></td><td class="r">£116,746,575</td><td class="r">£350,000,000</td><td class="r">30 Nov 2026</td></tr><tr><td>Department for International Trade</td><td class="r">£4,436,370</td><td class="r">£13,300,000</td><td class="r">31 Dec 2026</td></tr><tr><td>HM Land Registry</td><td class="r">£1,906,108</td><td class="r">£5,709,190</td><td class="r">28 Feb 2027</td></tr><tr><td>CPS</td><td class="r">£657,717</td><td class="r">£1,970,000</td><td class="r">31 Mar 2027</td></tr><tr><td>Home Office</td><td class="r">£644,077</td><td class="r">£1,930,908</td><td class="r">30 Nov 2026</td></tr><tr><td>United Lincolnshire Teaching Hospitals NHS Trust</td><td class="r">£168,000</td><td class="r">£168,000</td><td class="r">14 Dec 2026</td></tr></tbody></table></div>
+  <p class="cap">Contracts Finder, read 8 September 2026. Annual value is the published
+  contract value divided by its published term.</p>
+
+  <h3>Two of them end on the same day</h3>
+  <p>Drag the handle. Both rails travel together along the shared date axis, and they carry the same
+  stroke and the same type size, because <b>this page does not tell you which number is the good
+  one</b>. The difference could be scope and it could be price, and separating those two is the only
+  thing here worth paying for.</p>
+  <div class="fig"><svg viewBox="0 0 1000 260" id="vsvg" role="img" aria-label="Two annual values on a shared date axis. The page does not say which is better."><line x1="40" y1="86" x2="960" y2="86" stroke="#16163F" stroke-width="2.5"/><line x1="40" y1="196" x2="960" y2="196" stroke="#16163F" stroke-width="2.5"/><text x="40" y="66" font-size="15" font-weight="700" fill="#5B5B78">HM Revenue &amp; Customs</text><text x="40" y="238" font-size="15" font-weight="700" fill="#5B5B78">Home Office</text><text x="960" y="66" font-size="28" font-weight="800" fill="#16163F" text-anchor="end">£116,746,575</text><text x="960" y="238" font-size="28" font-weight="800" fill="#16163F" text-anchor="end">£150,196,594</text><line id="vmark" x1="820" y1="70" x2="820" y2="212" stroke="#9E3FFD" stroke-width="5"/><circle id="vgrip" cx="820" cy="141" r="15" fill="#fff" stroke="#9E3FFD" stroke-width="3"/><text id="vdate" x="820" y="20" font-size="15" font-weight="800" fill="#9E3FFD" text-anchor="middle">30 November 2026</text></svg></div>
+  <p class="cap">The purple belongs to the date and to nothing else on this page.</p>
 </section>
 
 <section>
-  <h2>Two ways in, and the first one asks you for nothing</h2>
+  <h2>What it costs to do nothing</h2>
+  <p>Nothing, on the day. That is what makes it easy. The cost is that a number agreed on
+  30 November 2026 is then the number for the whole next term, and the next
+  opportunity to look at it is a term away.</p>
+  <p>On a call-off running at £116,746,575 a year, a difference of one percent is
+  £1,167,466 a year. Two percent is £2,334,932. <b>This page is not claiming
+  either figure applies to you.</b> It is showing what the arithmetic of one percent looks like at
+  this scale, so that reading a free document before a signature is easy to justify.</p>
+  <p>And the arithmetic is the same for the other 15 contracts, which between them come to
+  £77,556,727 a year. Those renewals are spread across the next
+  7 months, so this is not a single moment. It is a sequence of
+  them, and the first one is the biggest.</p>
+  <p>There is a second cost and it is harder to see. A renewal agreed without a comparison is a
+  renewal nobody can defend afterwards. If a public accounts committee, an internal auditor or a
+  journalist later sets your call-off beside another department's, the useful answer is not that the
+  price was reasonable. It is that it was checked, and here is what it was checked against. That
+  document exists either before the signature or it does not exist at all.</p>
+</section>
+
+<section>
+  <h2>What is actually in the document</h2>
+  
+<h3>What arrives</h3>
+<p>A single PDF. One page per contract, and a summary sheet in front of it. For each of your
+16 live contracts it names the supplier, the published value, the term, the annual value, the
+end date, and what the same supplier is charging other departments on comparable published
+work. Where there is no comparator it says so rather than estimating.</p>
+<h3>What does not arrive</h3>
+<p>A savings figure with your name on it. Nobody outside your building knows your consumption,
+your scope, or what sits behind a framework call-off, and a number produced without those is
+theatre. The document says where you sit and stops.</p>
+<h3>What happens next, if anything</h3>
+<p>Nothing automatic. No follow up sequence, no calendar link. If the document is useful you
+will know who sent it. If it is not, that is the end and it cost you an email address.</p>
+
+  <h3>One line of it, as it would read</h3>
+  <p>This is the specimen entry for the call-off above, in the form every entry takes.</p>
+  <div class="tblwrap"><table class="tbl"><tbody>
+   <tr><td><b>Supplier</b></td><td>Amazon Web Services EMEA SARL, UK Branch</td></tr>
+   <tr><td><b>Title</b></td><td>HMRC_AWS007 Compute (OGVA2)</td></tr>
+   <tr><td><b>Route</b></td><td>Call-off from a framework agreement</td></tr>
+   <tr><td><b>Published value</b></td><td>£350,000,000</td></tr>
+   <tr><td><b>Annual value</b></td><td>£116,746,575, being the published value divided by its published term</td></tr>
+   <tr><td><b>Ends</b></td><td>30 November 2026</td></tr>
+   <tr><td><b>Same supplier, elsewhere</b></td><td>8 other published contracts across
+     7 other buyers, the largest at £150,196,594 a year</td></tr>
+   <tr><td><b>Comparable?</b></td><td>Partly. Term and route match. Scope and consumption are not
+     published by either party, so the difference is not attributed here</td></tr>
+   <tr><td><b>Source</b></td><td>Contracts Finder award notice, read 8 September 2026</td></tr>
+  </tbody></table></div>
+  <p class="cap">The last two rows are the ones that make the document worth reading. A comparison
+  that does not say what it cannot separate is a comparison that is hiding something.</p>
+</section>
+
+<section>
+  <h2>What happens after it arrives</h2>
+  <p>Nothing automatic. There is no follow up sequence, no calendar link in the footer, and nobody
+  telephones your switchboard. The document is the whole of the first exchange, and if it is not
+  useful it has cost you an email address and ten minutes.</p>
+  <p>If it is useful, the next question is not commercial. It is whether the differences it shows are
+  scope or price, and that is a question your own commercial team can put to the supplier without
+  anybody else in the room. A department that reads the document and then negotiates its own call-off
+  better has had the entire benefit of this at no cost, and that is a legitimate outcome.</p>
+  <p>The commercial arrangement only enters if you want the negotiation work itself: the specialists,
+  the drafted emails, the vendor knowledge. That step starts with your commercial team and your
+  information assurance team, not with a form, and it may never happen. Nothing on this page is
+  designed to make that step feel inevitable, because at a government department it is not.</p>
+  <p><b>And if the answer is no.</b> There is no second document, no sequence and no retargeting. This
+  page was built for one organisation and it is shown to nobody else.</p>
+</section>
+
+<section>
+  <h2>Two ways in, and the first asks you for nothing</h2>
   <div class="routes">
     <div class="rt">
       <span class="tag">Start here</span>
       <h3>The published read</h3>
-      <p>One document. Your sixteen contracts, what the same suppliers charge other departments for
-      comparable work, and where each of yours sits. Every figure is from Contracts Finder.</p>
-      <p><b>You send nothing.</b> No data, no engagement, no supplier information, nothing that
-      touches procurement. It arrives by email and you do what you like with it.</p>
+      <p>One document. Your 16 contracts, what the same suppliers charge other departments for
+      comparable published work, and where each of yours sits. Every figure is from Contracts Finder.</p>
+      <p><b>You send nothing.</b> No data, no engagement, no supplier information, nothing that touches
+      procurement. It arrives by email and you do what you like with it.</p>
     </div>
     <div class="rt rt--b">
       <span class="tag">Only if you want it, later</span>
       <h3>The contract review</h3>
-      <p>Before you sign, a specialist who has done a hundred deals with that vendor reads what you
-      are being offered and says whether you have a good deal or there is room.</p>
-      <p><b>This one is a commercial arrangement</b> and it goes through your commercial team, on
-      your timetable. WYN is paid a share of what is saved and nothing if nothing is. It is not the
-      first step and it does not have to happen at all.</p>
+      <p>Before you sign, a specialist who has done a hundred or more deals with that vendor reads what
+      you are being offered and says whether you have a good deal or there is room.</p>
+      <p><b>This one is a commercial arrangement.</b> It goes through your commercial team on your
+      timetable. WYN is paid a share of what is saved and nothing if nothing is. It is not the first
+      step and it does not have to happen at all.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>How the negotiation itself works, if it ever gets that far</h2>
-  <p>WYN describe it as: <em>&ldquo;You front the negotiations, we&rsquo;re behind the
+  <h2>How the negotiation works, if it ever gets that far</h2>
+  <p>WYN describe it in one line: <em>&ldquo;You front the negotiations, we&rsquo;re behind the
   scenes.&rdquo;</em> A network of specialists who have each done a hundred or more deals with the
-  specific vendor writes the emails, and you send them under your own name. Nobody from WYN
-  contacts your supplier.</p>
-  <h3>What they publish about results, quoted whole</h3>
+  specific vendor writes the emails, and you send them under your own name. Nobody from WYN contacts
+  your supplier, and WYN take no money from software vendors.</p>
+  <p>The asymmetry they say they are correcting is on their own homepage:
+  <em>&ldquo;the salesperson knows more about the vendor than you do.&rdquo;</em> That is not a claim
+  about your team. It is a claim about how often each side does this.</p>
+</section>
+
+<section>
+  <h2>What they publish about results, quoted whole</h2>
   <p>&ldquo;WYN&rsquo;s average savings across all software &amp; AI vendors and industries is 30%.
   <b>This is not from list price. It&rsquo;s from the vendor proposals our customers share with us,
   often &lsquo;best and final&rsquo; offers.</b>&rdquo;</p>
   <p class="cap">WYN&rsquo;s own claim, on their own site, quoted with the qualifier that follows it.
-  The second sentence is the load bearing one and it is why the number is worth anything.</p>
+  The second sentence is the load bearing one and it is the only reason the number means anything.
+  A saving measured from list price would not.</p>
+  <p>One more, and a caution with it: they publish <em>&ldquo;one UK university just saved over
+  &pound;1.5m across 3 software contracts&rdquo;</em>. That is their figure, not an audited one, and
+  a university is not a department. Weigh it accordingly.</p>
+  <p><b>Two of their own numbers disagree with each other.</b> Their homepage says
+  &ldquo;$3B+ software spend under management&rdquo; and their landing page says &ldquo;$1B+ software
+  contract volume negotiated&rdquo;. Neither is quoted here as fact, and anyone taking this further
+  should ask which is current.</p>
 </section>
 
 <section>
   <h2>The three seats this has to survive</h2>
-  <p>Anyone who takes this seriously will have to put it in front of two other people. Here is what
-  each of them asks first, and the answer to hand them.</p>
+  <p>Anyone who takes this seriously has to put it in front of two other people. Here is what each
+  asks first, and the answer to hand them.</p>
   <div class="tblwrap"><table class="tbl"><thead><tr><th>Seat</th><th>What they ask first</th>
   <th>The answer</th></tr></thead><tbody>
-  <tr><td><b>Chief Finance Officer</b><br><span class="cap">Justin Holliday</span></td><td>Is this a saving I can book, or a saving someone hopes for?</td><td>Neither, yet. It is a comparison against what the same supplier charges other departments, and it is free because it is built from what you already publish.</td></tr><tr><td><b>Finance Director, CDIO</b><br><span class="cap">David Swainston</span></td><td>Who is this and what do they want from us?</td><td>Nothing at this stage. No data, no engagement, no procurement. The first exchange is one document sent to you.</td></tr><tr><td><b>Director General, CDIO</b><br><span class="cap">Daljit Rehal</span></td><td>We buy through a framework. What is there to negotiate?</td><td>The framework sets the ceiling. The call-off sets the price, and the call-off is the thing that is being renewed.</td></tr>
+  <tr><td><b>Chief Finance Officer</b><br><span class="cap">Justin Holliday</span></td><td>Is this a saving I can book, or a saving someone hopes for?</td><td>Neither yet. It is a comparison against what the same suppliers charge other departments, and it is free because it is built from what you already publish.</td></tr><tr><td><b>Finance Director, CDIO</b><br><span class="cap">David Swainston</span></td><td>Who is this and what do they want from us?</td><td>Nothing at this stage. No data, no engagement, no procurement. The first exchange is one document sent to you.</td></tr><tr><td><b>Director General, CDIO</b><br><span class="cap">Daljit Rehal</span></td><td>We buy through a framework. What is there to negotiate?</td><td>The framework sets the ceiling. The call-off sets the price, and the call-off is the thing being renewed.</td></tr>
   </tbody></table></div>
   <div class="fwd">
-    <p class="tight"><b>The paragraph to forward, if that is easier</b></p>
-    <p class="tight">Our Amazon Web Services call-off (£350,000,000) ends on
-    30 November 2026. Someone has offered to send us a read of where it sits
-    against what the same supplier charges other departments, built entirely from our own published
-    award notices. They are asking for nothing from us and there is nothing to procure at this
-    stage. I think it is worth reading before the renewal goes through.</p>
+    <p style="margin-top:0"><b>The paragraph to forward, if that is easier</b></p>
+    <p>Our Amazon Web Services call-off (£350,000,000) ends on
+    30 November 2026. Someone has offered to send us a read of where it sits against
+    what the same supplier charges other departments, built entirely from our own published award
+    notices. They are asking for nothing from us and there is nothing to procure at this stage.
+    I think it is worth reading before the renewal goes through.</p>
   </div>
 </section>
 
 <section>
   <h2>Everything anyone has asked</h2>
-  <dl class="obj">
-  <dt>We buy through a Crown Commercial Service framework, so the price is set.</dt><dd>The framework sets what a supplier may charge at most. Your call-off is where the number is actually agreed, and 15 of your sixteen contracts are call-offs from a framework. The ceiling is not the price.</dd><dt>We cannot share commercial information with a third party.</dt><dd>You are not being asked to. Every figure in the first document comes from your own award notices on Contracts Finder. Nothing leaves your building and there is nothing to procure.</dd><dt>A share of savings is a commercial arrangement. That needs procurement.</dt><dd>It does, and it is not the first step. The first step produces a document. If you ever want the negotiation work itself, that is a separate conversation with your commercial team, on your timetable, and it may be that it never happens.</dd><dt>How would you know what other departments pay?</dt><dd>Because they publish it, in the same place you publish yours. There are 9 Amazon Web Services contracts on the register across 8 buyers.</dd><dt>Our contract is bigger and the scope is different.</dt><dd>Almost certainly. That is what the read is for: to say which part of a difference is scope and which part is price. A number without that separation is not worth having.</dd><dt>We already have commercial specialists.</dt><dd>Then the document either confirms what they already know, which is worth having in writing before a renewal, or it does not, which is worth knowing sooner.</dd><dt>What if we are already paying the right price?</dt><dd>Then it says so. That happens and it is a normal outcome.</dd><dt>Who is WYN?</dt><dd>WYN Procurement Limited, company number 15749056, incorporated 29 May 2024, two directors. Fifteen months old, and you should weigh that.</dd><dt>You are not on our supplier list.</dt><dd>Correct. Nothing in the first step requires us to be.</dd>
-  </dl>
+  <details><summary>We buy through a Crown Commercial Service framework, so the price is set.</summary><p>A framework sets what a supplier may charge at most. Your call-off is where the number is actually agreed, and 15 of your 16 live contracts are call-offs from a framework. The ceiling is not the price.</p></details><details><summary>We cannot share commercial information with a third party.</summary><p>You are not being asked to. Every figure in the first document comes from award notices you published yourself. Nothing leaves your building.</p></details><details><summary>A share of savings is a commercial arrangement. That needs procurement.</summary><p>It does, and it is not the first step. The first step produces a document. If the negotiation work itself is ever wanted, that is a separate conversation with your commercial team, on your timetable, and it may never happen.</p></details><details><summary>How would you know what other departments pay?</summary><p>Because they publish it, in the same place you publish yours. There are 9 Amazon Web Services contracts on the register across 8 buyers.</p></details><details><summary>Our contract is bigger and the scope is different.</summary><p>Almost certainly. That is what the read is for: to say which part of a difference is scope and which part is price. A number without that separation is not worth having.</p></details><details><summary>We already have commercial specialists.</summary><p>Then the document either confirms what they already know, which is worth having in writing before a renewal, or it does not, which is worth knowing sooner.</p></details><details><summary>What if we are already paying the right price?</summary><p>Then it says so. That happens and it is a normal outcome, not a failure.</p></details><details><summary>Who is WYN?</summary><p>WYN Procurement Limited, company number 15749056, incorporated 29 May 2024, two directors appointed that day and none resigned. Fifteen months old, and you should weigh that against a fifteen year old consultancy.</p></details><details><summary>You are not on our supplier list.</summary><p>Correct. Nothing in the first step requires us to be.</p></details><details><summary>Would you contact our supplier?</summary><p>No. WYN&#x27;s own description of the work is that you front the negotiation and they are behind the scenes. Nobody from WYN contacts a supplier.</p></details><details><summary>What happens to our data?</summary><p>There is none. The first document contains only what is already on Contracts Finder. If a later stage ever involves your own commercial papers, that stage starts with your information assurance team, not with a form on a web page.</p></details><details><summary>Is this a Freedom of Information request?</summary><p>No. Nothing here was obtained by request. Contracts Finder is a publication duty, and the notices were put there by the departments themselves.</p></details><details><summary>Why now and not after the renewal?</summary><p>Because after it renews the number is settled for the whole next term. The read is only useful before a signature, which is why the date on this page is a real one.</p></details><details><summary>What if the document is wrong?</summary><p>Then it is wrong in public. Every figure carries its source and its date, so it can be checked against the same notice you filed. That is the point of building it from your own publications.</p></details>
 </section>
 
 <section id="ask">
   <h2>The published read</h2>
-  <p>Your sixteen contracts, what other departments pay the same suppliers, and where yours sit.
-  One document, no fee, and nothing required from you.</p>
-  <p><b id="dline">It will be with you well before the renewal.</b> The Amazon Web Services call-off
-  ends 30 November 2026.</p>
+  <p>Your 16 contracts, what other departments pay the same suppliers, and where yours sit. One
+  document, no fee, and nothing required from you.</p>
+  <p><b id="dline">It will be with you well before the renewal.</b></p>
   <form class="form" onsubmit="event.preventDefault();document.getElementById('sent').hidden=false;">
     <div><label for="n">Name</label><input id="n" name="name" autocomplete="name" required></div>
-    <div><label for="em">Work email</label><input id="em" name="email" type="email"
-      autocomplete="email" required></div>
+    <div><label for="em">Work email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
     <button class="btn" type="submit">Send me the published read</button>
     <p class="terms">It is free because it is built from documents you have already published, and
     because a comparison you can check beats a claim you have to believe. If your numbers are already
@@ -178,28 +295,64 @@
 </section>
 
 <footer>
-  Produced independently as a demonstration of one to one advertising. Not affiliated with, endorsed
-  by, or produced on behalf of WYN Procurement Limited or HM Revenue &amp; Customs. Names and marks
-  belong to their owners. Every contract figure is taken from award notices published by the buyers
-  themselves on Contracts Finder and read on 8 September 2026; annual value is the
-  published contract value divided by its published term. Figures attributed to WYN are their own
-  published claims, quoted with their original qualifiers. The first step described here was
-  inferred by the operator from what WYN publishes and has not been agreed by WYN.
-  Strategy and GTM research by Jean Mundabi Fala.
+  Produced independently as a demonstration of one to one advertising. Not affiliated with, endorsed by,
+  or produced on behalf of WYN Procurement Limited or HM Revenue &amp; Customs. Names and marks belong to
+  their owners. Every contract figure is taken from award notices published by the buyers themselves on
+  Contracts Finder and read on 8 September 2026; annual value is the published contract value
+  divided by its published term. Figures attributed to WYN are their own published claims, quoted with
+  their original qualifiers. The first step described here was inferred by the operator from what WYN
+  publishes and has not been agreed by WYN. Strategy and GTM research by Jean Mundabi Fala.
 </footer>
 </div>
 
 <script>
-/* A date written into a static page is wrong the next morning. The live version of this page
-   still says the call-off "ends in 101 days", frozen on 21 August 2026. The page does the
-   arithmetic instead, from a fixed end date, so it is right on any day it is opened. */
+/* A date written into a static page is wrong the next morning. The previous version of this page
+   said the call-off "ends in 101 days", frozen on 21 August 2026, and was wrong for eighteen days.
+   The page does the arithmetic from a fixed end date instead. */
 (function(){
-  var END = new Date(2026, 10, 30);
-  var d = Math.round((END - new Date()) / 86400000);
-  var el = document.getElementById('dleft');
-  if (el) el.textContent = d > 0 ? ("in " + d + " days") : "and that date has passed";
-  var l2 = document.getElementById('dline');
-  if (l2 && d > 0) l2.textContent = "There are " + d + " days until it renews.";
+  var END=new Date(2026,10,30);
+  var d=Math.round((END-new Date())/86400000);
+  var a=document.getElementById('dleft'); if(a) a.textContent = d>0 ? ("in "+d+" days") : "and that date has passed";
+  var b=document.getElementById('dline'); if(b&&d>0) b.textContent="There are "+d+" days until it renews.";
+})();
+
+/* RULED LEDGER chrome: the left hairline fills as the reader travels. No nav bar. */
+(function(){
+  var bar=document.querySelector('.margin i'); if(!bar) return;
+  function tick(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.setProperty('--read',(h>0?(scrollY/h*100):0).toFixed(2)+'%');
+    bar.style.height=(h>0?(scrollY/h*100):0).toFixed(2)+'%';
+  }
+  addEventListener('scroll',tick,{passive:true}); addEventListener('resize',tick); tick();
+})();
+
+/* SIGNATURE MOVE: THE HELD VERDICT.
+   Two rails, identical stroke and identical type. The handle travels the shared date axis and
+   both figures travel with it. Whatever the reader does, the page never marks one as better:
+   there is no colour on either figure and no arrow between them. The accent belongs to the date. */
+(function(){
+  var svg=document.getElementById('vsvg'); if(!svg) return;
+  var mark=document.getElementById('vmark'), grip=document.getElementById('vgrip'),
+      date=document.getElementById('vdate'), W=1000, MIN=120, MAX=940;
+  var A=new Date(2026,5,1), B=new Date(2027,3,30);
+  function place(x){
+    x=Math.max(MIN,Math.min(MAX,x));
+    mark.setAttribute('x1',x); mark.setAttribute('x2',x);
+    grip.setAttribute('cx',x); date.setAttribute('x',x);
+    var f=(x-MIN)/(MAX-MIN), t=new Date(A.getTime()+f*(B-A));
+    date.textContent=t.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  }
+  function fromEvent(ev){
+    var r=svg.getBoundingClientRect();
+    var cx=(ev.touches?ev.touches[0].clientX:ev.clientX);
+    return (cx-r.left)/r.width*W;
+  }
+  var down=false;
+  svg.addEventListener('pointerdown',function(ev){down=true;place(fromEvent(ev));svg.setPointerCapture(ev.pointerId);});
+  svg.addEventListener('pointermove',function(ev){if(down)place(fromEvent(ev));});
+  svg.addEventListener('pointerup',function(){down=false;});
+  svg.addEventListener('pointercancel',function(){down=false;});
 })();
 </script>
 </body></html>
