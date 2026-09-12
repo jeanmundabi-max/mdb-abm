@@ -45,6 +45,38 @@
  .tile.big{grid-column:1/3} .tile.big .v{font-size:clamp(3.4rem,7vw,6.4rem)}
  .tile.on{background:var(--sc-accent)} .tile.on .l,.tile.on .s{color:#eaf6f1} .tile.on .v{color:#fff}
  .tile.off{background:#161616} .tile.off .v{color:#3a3a3a} .tile.off .l,.tile.off .s{color:#4a4a4a}
+ /* departures: a dark flip board */
+ .dep{background:#111111;border-radius:22px;padding:clamp(14px,1.8vw,26px);box-shadow:0 30px 60px rgba(0,0,0,.22);font-variant-numeric:tabular-nums}
+ .dhead{display:grid;grid-template-columns:1.2fr 1fr 1.3fr;gap:14px;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:#8F8880;font-weight:700;padding:6px 14px 12px;border-bottom:1px solid #2a2a2a}
+ .drow{display:grid;grid-template-columns:1.2fr 1fr 1.3fr;gap:14px;align-items:center;padding:16px 14px;border-bottom:1px solid #222;color:#E8E6E1}
+ .drow .dl{font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em} .drow .dv{font-size:clamp(1.4rem,2.6vw,2.2rem);font-weight:900;letter-spacing:-.03em} .drow .ds{font-size:.8rem;color:#8F8880;font-weight:600}
+ .drow.on{background:var(--sc-accent);border-radius:12px;color:#fff} .drow.on .ds{color:#eaf6f1}
+ .drow.off .dv,.drow.off .dl{color:#3a3a3a} .drow.off .ds{color:#444}
+ /* thread: the in-app support thread */
+ .phone{background:#fff;border:1px solid var(--rule);border-radius:28px;padding:18px;max-width:520px;box-shadow:0 30px 60px rgba(0,0,0,.12)}
+ .pbar{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-ink-soft);text-align:center;padding:4px 0 14px;border-bottom:1px solid var(--rule);margin-bottom:12px}
+ .bub{border-radius:18px;padding:12px 16px;margin:10px 0;font-size:.98rem;line-height:1.45;max-width:86%}
+ .bub.them{background:var(--sc-surface);margin-left:auto;border-bottom-right-radius:6px}
+ .bub.monzo{background:#fff;border:1px solid var(--rule);border-bottom-left-radius:6px}
+ .bub.agent{background:var(--sc-accent);color:#fff;border-bottom-left-radius:6px} .bub.agent b{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+ .bub.agent.off{background:#ececea;color:#b5b2ad}
+ .tdiv{text-align:center;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-ink-soft);font-weight:800;margin:16px 0}
+ .tfact{font-size:.8rem;color:var(--sc-ink-soft);padding:8px 4px;border-top:1px solid var(--rule)} .tfact b{color:var(--sc-ink);font-weight:900;font-size:1.05rem;margin-right:6px} .tfact i{font-style:normal;opacity:.7}
+ /* printed: the firm's own table, return or script */
+ .printed{background:#fff;border:1px solid var(--rule);border-radius:16px;padding:clamp(18px,2.4vw,34px);box-shadow:0 30px 60px rgba(0,0,0,.10)}
+ .ptitle{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-ink-soft);margin-bottom:14px}
+ .pfoot{font-size:.74rem;color:var(--sc-ink-soft);margin-top:14px}
+ .ptbl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums} .ptbl th{text-align:left;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-ink-soft);padding:8px 10px;border-bottom:2px solid var(--sc-ink)}
+ .ptbl td{padding:14px 10px;border-bottom:1px solid var(--rule);font-size:clamp(1rem,1.6vw,1.35rem);font-weight:800;letter-spacing:-.01em} .ptbl td:first-child{font-weight:700;color:var(--sc-ink-soft);font-size:.9rem}
+ .ptbl tr.on td{background:var(--sc-accent);color:#fff;border-radius:0} .ptbl tr.off td{color:#c9c5bf}
+ .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px} .ff{border:1px solid var(--rule);border-radius:10px;padding:14px 16px}
+ .ff label{display:block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-ink-soft);font-weight:800}
+ .ff .fv{font-size:clamp(1.4rem,2.6vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-top:4px} .ff .fs{font-size:.76rem;color:var(--sc-ink-soft);margin-top:4px}
+ .ff.on{background:var(--sc-accent);border-color:var(--sc-accent);color:#fff} .ff.on label,.ff.on .fs{color:#eaf6f1} .ff.off{color:#c9c5bf} .ff.off .fv{color:#c9c5bf}
+ .script .sline{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+ .scue{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-ink-soft);font-weight:800} .stext{font-size:1.02rem;line-height:1.5} .stext b{font-weight:900;font-size:1.3rem}
+ .script .sline.on{background:var(--sc-accent);color:#fff;border-radius:10px;padding:14px} .script .sline.on .scue{color:#eaf6f1} .script .sline.off .stext{color:#c9c5bf}
+ @media (max-width:700px){ .fgrid{grid-template-columns:1fr} .script .sline{grid-template-columns:1fr} }
  .stage1{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(22px,3vw,52px);min-height:100vh;align-content:center;align-items:center;padding:clamp(50px,7vh,100px) 0}
  .plate{background:#111111;border-radius:22px;padding:clamp(10px,1.2vw,16px);box-shadow:0 30px 60px rgba(0,0,0,.22)}
  .plate video{width:100%;display:block;border-radius:14px;max-height:min(46vh,470px);object-fit:contain;background:#111}
@@ -103,22 +135,22 @@
   <div>
     <p class="eyebrow" data-sc-cue="0 1 0">For customer service at BT Consumer</p>
     <h1 data-sc-cue="0 1 0" data-sc-rise="0">Hear your own line answered.</h1>
-    <p class="lede" data-sc-cue="0 1 0" data-sc-rise="0">The board on your wall says <b>3:33</b>, and Ofcom, Comparing customer service, May 2025 says it too. One call reason, <b>broadband faults and moving home</b>, answered on the first ring by a line built from bt.com/help, on a real number you can ring, inside 48 hours.</p>
+    <p class="lede" data-sc-cue="0 1 0" data-sc-rise="0">Ofcom, Comparing customer service, May 2025 says <b>3:33</b>. One call reason, <b>broadband faults and moving home</b>, answered on the first ring by a line built from bt.com/help, on a real number you can ring, inside 48 hours.</p>
     <p data-sc-cue="0 1 0"><a class="btn" href="#ask">Build the line</a> <a class="btn btn--ghost" href="#routes">Or talk to sales</a></p>
   </div>
   <div class="plate" data-sc-cue="0 1 0" data-sc-rise="0">
     <video id="film" src="hero.mp4" muted playsinline loop autoplay preload="auto" aria-label="Your wallboard, in thirty-two seconds"></video>
-    <p class="cap">Your board, in thirty-two seconds, no sound needed. Every tile is from the file; one tile is new.</p>
+    <p class="cap">The contact-centre wallboard, in thirty-two seconds, no sound needed. Every figure is from the file; one line is new.</p>
   </div>
  </div>
 </div></section>
 
 <!-- BEAT 2 · THE PROBLEM YOU HAVE NOW · pin. Their tiles, their file, their next edition. -->
 <section data-sc-act="pin" data-sc-span="2.0"><div data-sc-stage class="pstage"><div class="col">
- <p class="eyebrow" data-sc-cue="0.05">The board, as Ofcom&#x27;s Comparing customer service report prints it</p>
- <h2 data-sc-cue="0.07">Your number, in your regulator&rsquo;s words</h2>
+ <p class="eyebrow" data-sc-cue="0.05">The contact-centre wallboard</p>
+ <h2 data-sc-cue="0.07">Your number, as your regulator prints it</h2>
  <div data-sc-cue="0.12" style="margin-top:22px"><div class="wall"><div class="tile big" id="t0"><div class="l">Average wait</div><div class="v" id="tv0">3:33</div><div class="s">broadband and landline, 2024</div></div><div class="tile" id="t1"><div class="l">Hung up before an adviser</div><div class="v">14%</div><div class="s">2024</div></div><div class="tile" id="t2"><div class="l">Broadband complaints</div><div class="v">7 per 100k</div><div class="s">Q1 2026, industry 6</div></div><div class="tile" id="t3"><div class="l">Change on 2023</div><div class="v">+2:34</div><div class="s">the largest rise of any provider</div></div><div class="tile on off" id="tlit"><div class="l">Answered</div><div class="v">0:01</div><div class="s">one call reason, built from bt.com/help</div></div></div></div>
- <p class="cap" data-sc-cue="0.2">&ldquo;NOW Broadband had the largest decrease in average call waiting time in 2024, down by 2min 36s, while BT had the largest increase, up by 2min 34s.&rdquo; <span class="cite">Ofcom, Comparing customer service, published 22 May 2025; Ofcom Telecoms and Pay TV Complaints Q1 2026, published 30 July 2026.</span> The lit tile is not on your board yet. The rest is.</p>
+ <p class="cap" data-sc-cue="0.2">&ldquo;NOW Broadband had the largest decrease in average call waiting time in 2024, down by 2min 36s, while BT had the largest increase, up by 2min 34s.&rdquo; <span class="cite">Ofcom, Comparing customer service, published 22 May 2025; Ofcom Telecoms and Pay TV Complaints Q1 2026, published 30 July 2026.</span> The lit line is not there yet. The rest is.</p>
 </div></div></section>
 
 <section class="sc-section"><div class="col">
@@ -160,14 +192,14 @@
 
 <section class="sc-section"><div class="col">
  <p class="eyebrow">The fix, named</p>
- <h2>What changes on your board with ElevenAgents</h2>
+ <h2>What changes for you with ElevenAgents</h2>
  <p>Your line answers on the first ring, in a voice you chose, in the caller&#x27;s language. For broadband faults and moving home it works the case from the same pages your advisers use, resolves what it can, and when it cannot, the caller reaches a person who already has the whole history in front of them. The wallboard&#x27;s first tile stops being the number Ofcom prints about you.</p>
- <p>Nothing about how it is built is on this page, because you do not buy a contact centre on its plumbing. You buy it on the first tile, and on what the people who run boards like yours say about theirs.</p>
+ <p>Nothing about how it is built is on this page, because you do not buy a contact centre on its plumbing. You buy it on the number, and on what the people who run lines like yours say about theirs.</p>
 </div></section>
 
 <!-- BEAT 5 · PEOPLE LIKE YOU · flow, data-proof. Peers, quoted whole, with the limit on each. -->
 <section data-sc-act="flow" data-sc-span="2.0" data-proof><div data-sc-stage><div class="col">
- <p class="eyebrow" data-sc-cue="0.04">People who run a board like yours</p>
+ <p class="eyebrow" data-sc-cue="0.04">People who run a line like yours</p>
  <h2 data-sc-cue="0.06">What they said, in their words, with the limit on each</h2>
  <p class="lede" data-sc-cue="0.08">Every quotation below is the person&rsquo;s own, printed whole, from ElevenLabs&rsquo; published customer stories read on 12 September 2026. Where a result is described rather than spoken, it is marked as a description.</p>
  <div class="proof" data-sc-cue="0.12"><div class="pf"><div><div class="pf__who">Deutsche Telekom</div><div class="pf__role">Sahil Sakhuja, Head of AI Products</div></div><div><p class="pf__what" style="margin-top:0">&ldquo;In the contact center, the only moment you have to foster trust is when you say hello. Given the state-of-the-art voice quality that ElevenLabs has, customers will give us a chance.&rdquo;</p><p class="pf__src cite">ElevenLabs customer story, 10 August 2026. Europe&#x27;s largest telco by its own description, millions of contact-centre calls a year. No outcome figure is published, and none is claimed here.</p></div></div><div class="pf"><div><div class="pf__who">Revolut</div><div class="pf__role">Julia Ponomareva, Director of CX and AI Products</div></div><div><p class="pf__what" style="margin-top:0">&ldquo;Operating across nearly 40 markets, we needed a provider that could match the complexity, speed and language support required without making sacrifices on quality.&rdquo;</p><p class="pf__src cite">ElevenLabs customer story, 28 January 2026. Revolut&#x27;s own first-phase figures: time-to-resolution cut by more than 8 times, more than 99.7% of agent calls completed, 4 million customers, 30+ languages. Their deployment, their numbers, not applied to BT.</p></div></div><div class="pf"><div><div class="pf__who">Revolut</div><div class="pf__role">Ines Azevedo, Tech Product Owner (AI)</div></div><div><p class="pf__what" style="margin-top:0">&ldquo;We tested every major provider. Some lacked flexibility, others missed reliability targets, and a few couldn&#x27;t match the voice quality necessary where we operate.&rdquo;</p><p class="pf__src cite">ElevenLabs customer story, 28 January 2026. The evaluation sentence a technical owner will want to hear from another technical owner.</p></div></div><div class="pf"><div><div class="pf__who">Allegro</div><div class="pf__role">Allegro, three delivery hotlines</div></div><div><p class="pf__what" style="margin-top:0">An e-commerce platform serving over 20 million active buyers runs voice agents on three delivery hotlines; on escalation the agent collects the tracking number and passes a conversation summary to a person. ElevenLabs&#x27; description, no named speaker, no outcome figure.</p><p class="pf__src cite">ElevenLabs customer story, 7 September 2026.</p></div></div></div>
@@ -237,7 +269,7 @@
 
 <!-- BEAT 9 · THE ASK · pin. The lit tile arrives on the board above the form. -->
 <section data-sc-act="pin" data-sc-span="1.4" id="ask"><div data-sc-stage class="pstage"><div class="col">
- <div data-sc-cue="0.04"><div class="wall"><div class="tile"><div class="l">Average wait</div><div class="v">3:33</div><div class="s">broadband and landline, 2024</div></div><div class="tile"><div class="l">Hung up before an adviser</div><div class="v">14%</div><div class="s">2024</div></div><div class="tile"><div class="l">Broadband complaints</div><div class="v">7 per 100k</div><div class="s">Q1 2026, industry 6</div></div><div class="tile"><div class="l">Change on 2023</div><div class="v">+2:34</div><div class="s">the largest rise of any provider</div></div><div class="tile on"><div class="l">Answered</div><div class="v">0:01</div><div class="s">one call reason, built from bt.com/help</div></div></div></div>
+ <div data-sc-cue="0.04"><div class="wall"><div class="tile big"><div class="l">Average wait</div><div class="v">3:33</div><div class="s">broadband and landline, 2024</div></div><div class="tile"><div class="l">Hung up before an adviser</div><div class="v">14%</div><div class="s">2024</div></div><div class="tile"><div class="l">Broadband complaints</div><div class="v">7 per 100k</div><div class="s">Q1 2026, industry 6</div></div><div class="tile"><div class="l">Change on 2023</div><div class="v">+2:34</div><div class="s">the largest rise of any provider</div></div><div class="tile on"><div class="l">Answered</div><div class="v">0:01</div><div class="s">one call reason, built from bt.com/help</div></div></div></div>
  <h2 data-sc-cue="0.1" style="margin-top:26px">Hear your own line answered</h2>
  <p data-sc-cue="0.14">One call reason, broadband faults and moving home, from bt.com/help, on a real number, inside 48 hours. You ring it. <b id="dline">The number is yours for fourteen days.</b></p>
  <form class="form" data-sc-cue="0.18" onsubmit="event.preventDefault();document.getElementById('sent').hidden=false;">
@@ -250,7 +282,7 @@
 </div></div></section>
 
 <footer><div class="col">
-  Produced independently as a demonstration of one to one advertising. Not affiliated with, endorsed by, or produced on behalf of ElevenLabs or BT Group plc (BT and EE). Names and marks belong to their owners. Every figure about BT is taken from Ofcom&#x27;s Comparing customer service report and its second source as named on this page, read on 12 September 2026, and is quoted with its period. The wallboard is a drawing: it carries only figures from those files and one tile that does not exist yet. Quotations attributed to named people are their own published words; described results are ElevenLabs&rsquo; descriptions. The 48-hour demonstration line was inferred by the operator from what ElevenLabs publishes and has not been agreed by ElevenLabs. Strategy and GTM research by Jean Mundabi Fala.
+  Produced independently as a demonstration of one to one advertising. Not affiliated with, endorsed by, or produced on behalf of ElevenLabs or BT Group plc (BT and EE). Names and marks belong to their owners. Every figure about BT is taken from Ofcom&#x27;s Comparing customer service report and its second source as named on this page, read on 12 September 2026, and is quoted with its period. The object drawn on this page (the contact-centre wallboard) carries only figures from those files and one line that does not exist yet; where it shows words rather than figures, those words are a demonstration and not a quotation of BT. Quotations attributed to named people are their own published words; described results are ElevenLabs&rsquo; descriptions. The 48-hour demonstration line was inferred by the operator from what ElevenLabs publishes and has not been agreed by ElevenLabs. Strategy and GTM research by Jean Mundabi Fala.
 </div></footer>
 </main>
 
@@ -290,7 +322,7 @@ ScrollCraft.mount(document.body);
     vd.textContent = (KIND==='wait'
       ? "You let go at "+mmss(held)+". Your callers are asked for 3 minutes 33 seconds. That is "+Math.round(f*100)+"% of the published wait."
       : "You let go at "+mmss(held)+", which is "+Math.round(held*HPS)+" hours on this scale. The published window is 3 minutes 33 seconds, and 14% run past it.")
-      + " On the board, the new tile reads 0:01.";
+      + " The new line reads 0:01.";
     l.textContent='answered'; t.textContent='0:01'; t.setAttribute('fill','#3F8F7A'); ring.setAttribute('stroke','#3F8F7A'); ring.setAttribute('stroke-dashoffset','0');
     if(lit){ lit.classList.remove('off'); } }
   svg.addEventListener('pointerup',up); svg.addEventListener('pointercancel',up); svg.addEventListener('pointerleave',function(){ if(down) up(); });
