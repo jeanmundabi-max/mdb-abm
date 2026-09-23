@@ -97,7 +97,12 @@
  .holdwrap, .holdwrap *{pointer-events:auto!important}
  .holdwrap svg{width:100%;max-width:300px;height:auto;display:block;cursor:pointer;touch-action:none;user-select:none}
  .verdict{font-size:clamp(1.15rem,1.9vw,1.55rem);font-weight:700;line-height:1.35;letter-spacing:-.015em;min-height:3.6em;color:#E8E6E1}
- @media (max-width:760px){ .holdwrap{grid-template-columns:1fr} }
+ /* Sur telephone le bloc sombre depassait l'ecran: la copie en haut, l'anneau sous la ligne de
+    flottaison, donc un ecran presque entierement noir et vide pendant un cran de defilement.
+    L'anneau remonte et retrecit pour que le geste et sa phrase tiennent ensemble. */
+ @media (max-width:760px){ .holdwrap{grid-template-columns:1fr;gap:16px;margin-top:16px}
+   .holdwrap svg{max-width:220px;margin:0 auto} .verdict{min-height:0;font-size:1.05rem}
+   #peak .dark{padding:20px} #peak .dark p{font-size:.95rem} }
  .tblwrap{overflow-x:auto}
  .tbl{width:100%;border-collapse:collapse;margin-top:22px;font-size:.93rem;min-width:540px}
  .tbl th{text-align:left;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-ink-soft);padding:0 12px 10px 0;border-bottom:1px solid var(--rule)}
@@ -130,7 +135,7 @@
 <div class="strip" id="strip">
   <div class="wm">IIElevenLabs<span>ElevenAgents</span></div>
   <div class="st"><i>Complaints received, Q2 2026</i><b>120,156</b></div><div class="st"><i>Resolved same or next working day</i><b>42.5%</b></div><div class="st"><i>Referred to the Energy Ombudsman</i><b>7,474</b></div>
-  <div class="st off" id="stlit"><i>Q3 2026</i><b id="stlitv">&mdash;</b></div>
+  <div class="st off" id="stlit"><i>Q3 2026</i><b id="stlitv">not yet</b></div>
   <div class="who">British Gas &middot; British Gas, our performance, Q2 2026</div>
 </div>
 <main>
