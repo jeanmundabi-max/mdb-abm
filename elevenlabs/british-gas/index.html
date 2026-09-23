@@ -90,6 +90,11 @@
  .figwrap{margin:22px 0 8px;overflow-x:auto}
  .cap{font-size:.84rem;color:var(--sc-ink-soft);margin-top:10px;max-width:70ch}
  .holdwrap{display:grid;grid-template-columns:300px 1fr;gap:clamp(20px,3vw,44px);align-items:center;margin-top:22px}
+ /* The engine hands pointer-events back only when a cue is more than half visible, and it
+    writes that inline, so the signature move was dead to a press for most of the act. The
+    interactive block opts out of that, permanently. Found 2026-09-23: a seven second press
+    in the middle of the ring did nothing, on phone and on laptop. */
+ .holdwrap, .holdwrap *{pointer-events:auto!important}
  .holdwrap svg{width:100%;max-width:300px;height:auto;display:block;cursor:pointer;touch-action:none;user-select:none}
  .verdict{font-size:clamp(1.15rem,1.9vw,1.55rem);font-weight:700;line-height:1.35;letter-spacing:-.015em;min-height:3.6em;color:#E8E6E1}
  @media (max-width:760px){ .holdwrap{grid-template-columns:1fr} }
